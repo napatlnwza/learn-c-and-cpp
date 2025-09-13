@@ -2,36 +2,38 @@
 
 int main()
 {
-    int score[31];
+    int score[31] = {23, 30, 40, 7, 48, 80, 6, 32, 96, 79, 67, 7, 17, 10, 66, 73, 21, 39, 36, 51, 98, 44, 16, 96, 100, 99, 72, 46, 41, 30};
     // รับข้อมูล
-    for (int i = 0; i < 31; i++)
+    // for (int i = 0; i < 31; i++)
+    // {
+    //     printf("Enter score%d : ", i);
+    //     scanf("%d", &score[i]);
+    // }
+
+    // เรียงจากน้อยไปมาก
+    for (int i = 1; i < 30; i++)
     {
-        printf("Enter score%d : ", i);
-        scanf("%d", &score[i]);
-    }
-    if (score[0] >= 0  && score[0] <= 100)
-    {   // เรียงจากน้อยไปมาก 
-        int min = score[0];
-        score[0] = score[1];
-        score[1] = ;
-        for (int j = 0; j < 31; j++)
+        int min = score[i];
+        int j = i - 1;
+        while (j >= 0 && score[j] > min)
         {
-            if (min )
+            score[j + 1] = score[j];
+            j--;
         }
-        // หาค่าเฉลี่ย
-        float avr = 0;
-        int k = 0, sum = 0;
-        while (k < 31)
-        {
-            sum += score[k];
-            k++;
-        }
-        avr = sum / 30;
-        printf("\nAverage = %.2f", avr);
+        score[j + 1] = min;
     }
-    else if (score[0] < 0 || score[0] > 100)
+    for (int i = 0;i<30;++i) {
+        printf("%d " ,score[i]);
+    }
+    // หาค่าเฉลี่ย
+    float avr = 0;
+    int k = 0, sum = 0;
+    while (k < 31)
     {
-        printf("Error");
+        sum += score[k];
+        k++;
     }
+    avr = sum / 30;
+    printf("\nAverage = %.2f", avr);
     return 0;
 }
