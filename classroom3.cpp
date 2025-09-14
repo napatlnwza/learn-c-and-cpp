@@ -30,4 +30,6 @@ int main () {
     cout << "Average High Temperature is " << fixed << setprecision (2) << avrhigh << endl;
     cout << "Average Low Temperature is " << fixed << setprecision (2) << avrlow << endl; 
     return 0;
+    //sort(hightemp, hightemp + 7, greater<int>());
+    // เรียงจากกมากไปน้อย
 }
