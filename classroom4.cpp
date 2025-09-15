@@ -116,8 +116,9 @@ int classroom4() {
         case 3:
             classroom3();
         break;
-        defauit:
+        default:
             cout << "Invalid choie" << endl;
+        break;
     }
     return 0;
 }
