@@ -15,6 +15,8 @@ int main () {
         cout << "Low Temp " << day[i] << " : " << endl;
         cin >> lowtemp[i];
     }
+    sort(hightemp, hightemp + 7, greater<int>());
+    
     sort(hightemp,hightemp + 7);
     sort(lowtemp,lowtemp  + 7);
     float avrhigh,avrlow,sumhigh,sumlow;
@@ -25,11 +27,11 @@ int main () {
     avrhigh=sumhigh/7;
     avrlow=sumlow/7;
     cout << "*********************************" << endl;
-    cout << "Max Temperature is " << hightemp[0] << endl;
+    cout << "Max Temperature is " << hightemp[6] << endl;
     cout << "Min Temperature is " << lowtemp[0] << endl;
     cout << "Average High Temperature is " << fixed << setprecision (2) << avrhigh << endl;
     cout << "Average Low Temperature is " << fixed << setprecision (2) << avrlow << endl; 
     return 0;
-    //sort(hightemp, hightemp + 7, greater<int>());
+    // sort(hightemp, hightemp + 7, greater<int>());
     // เรียงจากกมากไปน้อย
 }

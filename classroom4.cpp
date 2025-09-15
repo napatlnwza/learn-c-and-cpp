@@ -68,7 +68,7 @@ int classroom2() {
 }
 int classroom3() {
     cout << "Enter Your name : ";
-    char name[50];
+    char name[50]=(" ");
     cin >> name;
     cout << "Hello " << name << endl;
     cout << "********************************" << endl;
