@@ -17,7 +17,7 @@ long long factorial(int n) {
 
 int main() {
     int num;
-    std::cout << "Enter a positive integer: ";
+    cout << "Enter a positive integer: ";
     std::cin >> num;
 
     if (num < 0) { // ตรวจสอบว่าตัวเลขเป็นบวกหรือไม่
