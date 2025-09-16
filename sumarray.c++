@@ -1,14 +1,15 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 long int sum(vector<int> n) {
-    sort(n.begin(), n.end())
+    sort(n.begin(), n.end());
     if (n[0]<=0) {
         return 0;
     }
     else if (n[0]>0) {
-        return n+n[-1];
+        return n+ sum(n[-1]);
     }
 
 }
