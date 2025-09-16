@@ -4,12 +4,13 @@
 using namespace std;
 
 long int sum(vector<int> n) {
-    sort(n.begin(), n.end());
-    if (n[0]<=0) {
+    
+    if (n.size()==0) {
         return 0;
     }
-    else if (n[0]>0) {
-        return n+ sum(n[-1]);
+    else {
+        vector<int> rest(n.begin() +1 ,n.end());
+        return n[0] + sum(rest);
     }
 
 }
@@ -20,7 +21,7 @@ int main() {
     int size;
     cin >> size;
     for (int i=0;i<size;i++) {
-        cout << "Enter Number " << i;
+        cout << "Enter Number : " << i << endl;
         int a;
         cin >> a;
         n.push_back(a);
