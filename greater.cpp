@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <string>
 using namespace std;
 
 int greaters(int s,vector<int> num) {
@@ -8,8 +9,8 @@ int greaters(int s,vector<int> num) {
         return num[0];
     }
     else  if (s>1) {
-        sort(num.begin() ,num.end(),greater());
-        return num[0];
+        
+        return max(num[s-1], greaters(s-1, num));
     }
 }
 
@@ -17,7 +18,8 @@ int main() {
     vector<int> n;
     int size;
     cout << "Enter size : ";
-    cin >> size;
+    cin >> 
+    size;
     for (int i=0;i<size;i++) {
         cout << "Enter Number " << i << ": " << endl;
         int a;
