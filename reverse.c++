@@ -2,17 +2,18 @@
 #include <string>
 using namespace std;
 
-long int reverse(string str) {
-    if (str.length == 0 || str.length == 1) {
+string reverse(string str) {
+    if (str.length() < 1) {
         return str;
     }
-    else if (str.length > 1) {
+    else {
         return str.back() + reverse(str.substr(0, str.length() - 1));
     }
 }
 
 int main() {
     string a;
+    Cout << "Enter String : "
     cin >> a;
     cout << reverse(a);
     return 0;
