@@ -13,7 +13,7 @@ string reverse(string str) {
 
 int main() {
     string a;
-    Cout << "Enter String : "
+    cout << "Enter String : ";
     cin >> a;
     cout << reverse(a);
     return 0;
