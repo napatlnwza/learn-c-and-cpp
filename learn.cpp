@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+// #include <cmath>
 using namespace std;
 
 int main() {
@@ -13,9 +14,24 @@ int main() {
     for (int i=0;i<m[0];i++) {
         for (int j=0;j<m[1];j++) {
             cout << matrix[j][i] << " ";
-
         }
         cout << endl;
     }
+    // set<string> a;
+    // string aa;
+    // getline(cin ,aa);
+    // a.insert(aa);
+    // for (string aaa : a) {
+    //     cout << aaa;
+    // }
+    // int bath,day,test;
+    // int ans;
+    // cin >> test;
+    // for (int i=0;i<test;i++) {
+    //     cin >> bath >> day;
+    //     ans = bath * day;
+    //     cout << ans << endl;
+    // }
+    // cout << ans;
     return 0;
 }
